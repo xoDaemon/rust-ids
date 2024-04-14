@@ -1,6 +1,14 @@
 use std::io;
 
 use pcap::{Capture, Device};
+use pnet::packet::{
+    ethernet::{EtherTypes, EthernetPacket},
+    ip::IpNextHeaderProtocols,
+    ipv4::Ipv4Packet,
+    tcp::TcpPacket,
+    udp::UdpPacket,
+    Packet,
+};
 
 fn main() {
     println!("---------------------------------------------------");
@@ -42,7 +50,7 @@ fn main() {
         .expect("Input not an integer!")
         - 1;
 
-        println!();
+    println!();
     println!("---------------------------------------------------");
 
     println!(
@@ -57,6 +65,51 @@ fn main() {
         .unwrap(); // assume activation worked;
 
     while let Ok(packet) = cap.next_packet() {
-        println!("Received packet! {:?}", packet);
+        // Parse Ethernet packet
+        if let Some(eth_pkg) = EthernetPacket::new(packet.data) {
+            match eth_pkg.get_ethertype() {
+                EtherTypes::Ipv4 => {
+                    // Parse IPv4 packet
+                    if let Some(ipv4) = Ipv4Packet::new(eth_pkg.payload()) {
+                        let protocol = ipv4.get_next_level_protocol();
+                        print!("Ipv4 packet: {} -> {} - ", ipv4.get_source(),
+                                    ipv4.get_destination());
+                        match protocol {
+                            IpNextHeaderProtocols::Tcp => {
+                                // Handle TCP packets
+                                let tcp_packet = TcpPacket::new(eth_pkg.payload());
+                                if let Some(tcp_packet) = tcp_packet {
+                                    println!(
+                                        "using TCP: {}:{} -> {}:{}; Seq: {}, Ack: {}",
+                                        eth_pkg.get_source(),
+                                        tcp_packet.get_source(),
+                                        eth_pkg.get_destination(),
+                                        tcp_packet.get_destination(),
+                                        tcp_packet.get_sequence(),
+                                        tcp_packet.get_acknowledgement()
+                                    );
+                                }
+                            }
+                            IpNextHeaderProtocols::Udp => {
+                                // Handle UDP packets
+                                let udp_packet = UdpPacket::new(eth_pkg.payload());
+                                if let Some(udp_packet) = udp_packet {
+                                    println!(
+                                        "using UDP: {}:{} -> {}:{}; Len: {}",
+                                        eth_pkg.get_source(),
+                                        udp_packet.get_source(),
+                                        eth_pkg.get_destination(),
+                                        udp_packet.get_destination(),
+                                        udp_packet.get_length()
+                                    );
+                                }
+                            }
+                            _ => {}
+                        }
+                    }
+                }
+                _ => {}
+            }
+        }
     }
 }

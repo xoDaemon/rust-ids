@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 pcap = "1.2.0"
+pnet = "0.34.0"
