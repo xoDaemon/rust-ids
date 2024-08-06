@@ -1,3 +1,4 @@
+workspace = { members = ["WindowsAlertSystem"] }
 [package]
 name = "main"
 version = "0.1.0"
@@ -6,5 +7,15 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+chrono = "0.4.38"
+colored = "2.1.0"
+crossterm = "0.27.0"
+inputbot = "0.6.0"
+libc = "0.2.154"
+libloading = "0.8.3"
+notify-rust = "4.11.0"
 pcap = "1.2.0"
 pnet = "0.34.0"
+regex = "1.10.4"
+serde = { version = "1.0.188", features = ["derive"] }
+toml = "0.8.12"

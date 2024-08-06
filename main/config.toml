@@ -1,0 +1,6 @@
+[general]
+mode = "detailed" # or "summary"
+
+[alert]
+ip = "192.168.100.11"
+port = 80

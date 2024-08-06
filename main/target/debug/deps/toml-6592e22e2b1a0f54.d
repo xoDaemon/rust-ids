@@ -1,0 +1,13 @@
+D:\Desktop\Projects\rust-ids\main\target\debug\deps\libtoml-6592e22e2b1a0f54.rmeta: C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\lib.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\map.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\value.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\de.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\ser.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\macros.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\edit.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\fmt.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\table.rs
+
+D:\Desktop\Projects\rust-ids\main\target\debug\deps\toml-6592e22e2b1a0f54.d: C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\lib.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\map.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\value.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\de.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\ser.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\macros.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\edit.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\fmt.rs C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\table.rs
+
+C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\lib.rs:
+C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\map.rs:
+C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\value.rs:
+C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\de.rs:
+C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\ser.rs:
+C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\macros.rs:
+C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\edit.rs:
+C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\fmt.rs:
+C:\Users\georg\.cargo\registry\src\index.crates.io-6f17d22bba15001f\toml-0.8.12\src\table.rs:
